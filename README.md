@@ -1,1 +1,1 @@
-# latex-parser
+# latex-math-parser
