@@ -227,7 +227,6 @@ Root
   $r->position = array('start'=>$this->peg_reportedPos,'end'=>$this->peg_currPos);
   return $r;
   ?> **/
-    console.log("Root   : ", new Date());
 
   var items = lines.map(function (value,index){return value[1];});
   if (typeof final != 'undefined' && null != final)
