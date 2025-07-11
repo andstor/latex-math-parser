@@ -275,12 +275,12 @@ export class MPFunction extends MPNode {
  }
 }
 
-export class MPFrac extends MPNode {
+export class MPFraction extends MPNode {
  numerator: MPNode;
  denominator: MPNode;
  constructor(numerator: MPNode, denominator: MPNode) {
   super();
-  this.type = 'frac';
+  this.type = 'fraction';
   this.numerator = numerator;
   this.denominator = denominator;
  }

@@ -582,7 +582,7 @@ Function
 
 Frac
   = Escape 'frac' BeginGroup _? numerator:Expression _? EndGroup _? BeginGroup _? denominator:Expression _? EndGroup {
-    var n = new MPFrac(numerator, denominator);
+    var n = new MPFraction(numerator, denominator);
     n.position = location();
     return n;}
 
