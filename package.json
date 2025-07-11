@@ -1,7 +1,7 @@
 {
-  "name": "latex-math-parser",
+  "name": "@andstor/latex-math-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parser for parsing LaTeX math expressions",
   "main": "index.js",
   "type": "module",
   "repository": {
