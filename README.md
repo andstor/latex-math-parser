@@ -21,6 +21,11 @@ const ast = parse(latex);
 console.log(JSON.stringify(ast, null, 2));
 ```
 
+## Generators
+
+This parser can be used with various code generators to convert the AST into different programming languages or formats. Currently supported generators include:
+- **[maxima-codegen](https://github.com/andstor/maxima-codegen)**: Maxima is a computer algebra system that can manipulate symbolic expressions.
+
 ## Features
 The complete grammar for this parser can be found at [src/grammars/latex.pegjs](src/grammars/latex.pegjs). Following are some of the key features supported by the parser:
 
@@ -45,9 +50,3 @@ The complete grammar for this parser can be found at [src/grammars/latex.pegjs](
 - **Numbers**: Integer and floating-point literals.
 - **Booleans and strings**: Parsing of boolean (`true`, `false`) and string literals.
 - **Matrix environments**: Parsing of LaTeX matrix environments (e.g., `matrix`, `pmatrix`, etc.).
-
-
-## Generators
-
-This parser can be used with various code generators to convert the AST into different programming languages or formats. Currently supported generators include:
-- **[Maxima](https://github.com/andstor/maxima-codegen)**: A computer algebra system that can manipulate symbolic expressions.
