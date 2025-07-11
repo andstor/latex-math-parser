@@ -275,6 +275,19 @@ export class MPFunction extends MPNode {
  }
 }
 
+export class MPFrac extends MPNode {
+ numerator: MPNode;
+ denominator: MPNode;
+ constructor(numerator: MPNode, denominator: MPNode) {
+  super();
+  this.type = 'frac';
+  this.numerator = numerator;
+  this.denominator = denominator;
+ }
+ getChildren(): MPNode[] {
+  return [this.numerator, this.denominator];
+ }
+}
 
 export class MPMatrix extends MPNode {
  name: MPNode;  // The name of the environment.

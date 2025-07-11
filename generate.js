@@ -16,7 +16,7 @@ var parserCode = fs.readFile(grammarPath, 'utf8', function (err, data) {
        plugins: [tspegjs],
        allowedStartRules: ["Root"],
        tspegjs: {
-         customHeader: "import {MPNode, MPOperation, MPAtom, MPConstant, MPInteger, MPFloat, MPString, MPBoolean, MPIdentifier, MPAssignment, MPComment, MPFunctionCall, MPFunction, MPGroup, MPSet, MPList, MPPrefixOp, MPPostfixOp, MPIndexing, MPIf, MPLoop, MPLoopBit, MPEvaluationFlag, MPStatement, MPRoot, MPAnnotation, MPMacro, MPLimit, MPLogarithm, MPBinomial, MPSum, MPIntegral, MPTrigonometric, MPDifferential, MPArgument, MPMatrix, MPNthRoot} from \'./MP_classes.js\';" +
+         customHeader: "import {MPNode, MPOperation, MPAtom, MPConstant, MPInteger, MPFloat, MPString, MPBoolean, MPIdentifier, MPAssignment, MPComment, MPFunctionCall, MPFunction, MPGroup, MPSet, MPList, MPPrefixOp, MPPostfixOp, MPIndexing, MPIf, MPLoop, MPLoopBit, MPEvaluationFlag, MPStatement, MPRoot, MPAnnotation, MPMacro, MPFrac, MPLimit, MPLogarithm, MPBinomial, MPSum, MPIntegral, MPTrigonometric, MPDifferential, MPArgument, MPMatrix, MPNthRoot} from \'./MP_classes.js\';" +
                        "import {CONSTANTS} from\'./constants.js\';"
        }
    });

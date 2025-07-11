@@ -562,7 +562,8 @@ FuncName
   /// "binom"
 
 Function
-  = Limit
+  = Frac
+  / Limit
   / Logarithm
   / Binomial
   / Sum
@@ -579,12 +580,14 @@ Function
     n.position = location();
     return n;}
 
-Limit
-  = Escape 'lim' '_' BeginGroup _? from:Identifier Escape 'to' _? to:Expression _? EndGroup exp:MultiplicativeExpression {
-    var n = new MPLimit(from, to, exp);
+Frac
+  = Escape 'frac' BeginGroup _? numerator:Expression _? EndGroup _? BeginGroup _? denominator:Expression _? EndGroup {
+    var n = new MPFrac(numerator, denominator);
     n.position = location();
     return n;}
-  / Escape 'lim' '_' BeginGroup _? from:Identifier Escape 'to' _? to:Expression _? EndGroup exp:MultiplicativeExpression {
+
+Limit
+  = Escape 'lim' '_' BeginGroup _? from:Identifier Escape 'to' _? to:Expression _? EndGroup exp:MultiplicativeExpression {
     var n = new MPLimit(from, to, exp);
     n.position = location();
     return n;}
